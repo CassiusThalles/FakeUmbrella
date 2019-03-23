@@ -42,7 +42,7 @@ def chartpage(requests):
                 #responselist.append({'name':item[2], 'employees':item[3], 'color':'rgba(120, 166, 91, 0.6)'})
                 colors.append('rgba(120, 166, 91, 0.6)')
                 break
-            if(count == 40):
+            if(count == len(response['list'])):
                 #responselist.append({'name':item[2], 'employees':item[3], 'color':'rgba(188, 40, 29, 0.6)'})
                 colors.append('rgba(188, 40, 29, 0.6)')
     responselist.append({'labels': name, 'datasets': {'label':'Number of Employees','data': employees, 'backgroundColor': colors}})
@@ -60,7 +60,7 @@ def listpage(requests):
     return JsonResponse(responselist, safe=False)
 
 def openWeatherApiKey():
-    return 'Open Weather API Key Here'
+    return 'ca8e9070d09d4eaf083dd8139131da26'
 
 def consultApi(city, country):
     apikey = openWeatherApiKey()
