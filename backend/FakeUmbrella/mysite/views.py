@@ -60,7 +60,7 @@ def listpage(requests):
     return JsonResponse(responselist, safe=False)
 
 def openWeatherApiKey():
-    return 'ca8e9070d09d4eaf083dd8139131da26'
+    return 'Put your API Key here'
 
 def consultApi(city, country):
     apikey = openWeatherApiKey()
